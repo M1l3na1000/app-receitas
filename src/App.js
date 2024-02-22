@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+impo//Hooks React
+import React, {useEffect, useState} from "react";
+import "./App.css"; //estilo
+import logo from './';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+function App(){ 
+  const [movie, setMovie] = useState([]);  // controlar o estado
+
+  useEffect( () => { //função para consumir a api
+    function carregaDados(){
+      let url = '';
+
+      fetch(url)
+      .then((r) => r.json())
+      .then((json) => {
+        setMovie(json);
+      })
+    }
+    carregaDados();
+  },[]);
+
+  return(
+    <div className='container'>
+      <header>
+        <img src={logo} className="App-logo" alt="logo"/>
+        <nav>
+          <ul>
+            <li><a href="">Receitas</a></li>
+            <li><a href="">Adicionar Nova Receita</a></li>
+          </ul>
+        </nav>
       </header>
+
+      {movie.map((item) => { //percorrendo a api
+        return(
+          <article className='post' key={item.id}>
+            <strong className="titulo">{item.receita}</strong>
+            <p className='ingredientes'>{item.ingredientes}</p>        
+            <a className="botao" href="">Detalhes</a>
+          </article>
+        );
+      })}
+      <footer>
+        <p>₢Todos os Direitos Reservados</p>
+      </footer>
     </div>
   );
 }
-
+//exportar
 export default App;
