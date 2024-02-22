@@ -1,19 +1,19 @@
-impo//Hooks React
+//Hooks React
 import React, {useEffect, useState} from "react";
 import "./App.css"; //estilo
-import logo from './';
+import logo from './logo.chef.png';
 
 function App(){ 
-  const [movie, setMovie] = useState([]);  // controlar o estado
+  const [receitas, setReceita] = useState([]);  // controlar o estado
 
-  useEffect( () => { //função para consumir a api
+  useEffect( () => { //função para consumir a api    
     function carregaDados(){
-      let url = '';
+      let url = 'https://sujeitoprogramador.com/r-api/?api=filmes';
 
       fetch(url)
       .then((r) => r.json())
       .then((json) => {
-        setMovie(json);
+        setReceita(json);
       })
     }
     carregaDados();
@@ -31,7 +31,7 @@ function App(){
         </nav>
       </header>
 
-      {movie.map((item) => { //percorrendo a api
+      {receitas.map((item) => { //percorrendo a api
         return(
           <article className='post' key={item.id}>
             <strong className="titulo">{item.receita}</strong>
