@@ -2,7 +2,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #304D6D;
+  background-color: #EFD9CE;
   /*background-image:;*/
   background-size: 100% auto;
 }
@@ -22,8 +22,8 @@ header{
   font-size: 32px;
   height: 150px;
   width: 100%;
-  background-color: #E03C00;
-  color: #fff;
+  background-color: #E86252;
+  color: #A675A1;
 }
 
 header nav ul {
@@ -47,7 +47,7 @@ header a {
 }
 
 header nav a:hover {
-  color: #ddce2e;
+  color: #E1CE7A;
   text-decoration: none;
   transform: scale(1.05);
 }
@@ -71,7 +71,7 @@ header nav a:hover {
 }
 
 .foto{
-  border: 10px inset #E03C00;
+  border: 10px inset #62929E;
   border-radius: 15px;
   margin: 10px;
 }
@@ -80,7 +80,7 @@ header nav a:hover {
   height: 40px;
   border-radius: 5px;
   color: #fff;
-  background-color: #304D6D;
+  background-color: #E86252;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +92,7 @@ header nav a:hover {
 
 .botao:hover{
   transition: all 0.5s;
-  background-color: #ddce2e;
+  background-color: #62929E;
 }
 
 .sinopse{
@@ -147,7 +147,7 @@ footer{
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -159,4 +159,4 @@ footer{
   to {
     transform: rotate(360deg);
   }
-}
+}*/
