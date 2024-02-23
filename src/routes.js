@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Inicio from './pages/Inicio'
 import Detalhes from './pages/Detalhes'
 import AdicionarNova from './pages/AdicionarNova'
+import Erro from './pages/Erro'
 
 function RoutesApp(){
     return(
@@ -16,6 +17,8 @@ function RoutesApp(){
                 <Route path="/" element={<Inicio/>}/>
                 <Route path="/detalhes" element={<Detalhes/>}/>
                 <Route path="/adicionar" element={<AdicionarNova/>}/>
+
+                <Route path="*" element={ <Erro/> } />
             </Routes>
             <Footer/>
         </BrowserRouter>
