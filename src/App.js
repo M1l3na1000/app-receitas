@@ -8,7 +8,7 @@ function App(){
 
   useEffect( () => { //função para consumir a api    
     function carregaDados(){
-      let url = 'https://sujeitoprogramador.com/r-api/?api=filmes';
+      let url = 'http://localhost:3000/receitas';
 
       fetch(url)
       .then((r) => r.json())
