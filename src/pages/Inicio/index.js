@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 function App() {
   const [data, setData] = useState([])
 
@@ -24,9 +25,7 @@ function App() {
 
 
   return(
-    <div>
-      <h1>Site Receitas</h1>
-      <div>
+      <div className='container'>
         {
              data.map((item) => {
               return(
@@ -39,9 +38,7 @@ function App() {
             })
         }
       </div>
-    </div>
   )
-
 }
 
 export default App;
