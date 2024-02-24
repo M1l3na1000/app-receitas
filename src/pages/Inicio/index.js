@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
+/*import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 function App() {
   const [data, setData] = useState([])
-
-  const url = "http://localhost:3000/receitas"
+  const url = "https://spoonacular.com/application/frontend/downloads/spoonacular-openapi-3.json"
 
   async function fetchData() {
     try {
@@ -41,8 +39,8 @@ function App() {
   )
 }
 
-export default App;
-/*//Hooks React
+export default App;*/
+//Hooks React
 import { Link } from 'react-router-dom';
 import React, {useEffect, useState} from "react";
 import "./style.css"; //estilo
@@ -78,5 +76,5 @@ function Inicio(){
   );
 }
 //exportar
-export default Inicio;*/
+export default Inicio;
 
